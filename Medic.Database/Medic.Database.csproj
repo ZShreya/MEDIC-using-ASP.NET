@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36EB763F-79A4-494A-9C47-493A2AB80DFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Medic.Database</RootNamespace>
+    <AssemblyName>Medic.Database</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MedicContext.cs" />
+    <Compile Include="Migrations\202302011750312_initialized.cs" />
+    <Compile Include="Migrations\202302011750312_initialized.Designer.cs">
+      <DependentUpon>202302011750312_initialized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302081825518_ImageURLAdded.cs" />
+    <Compile Include="Migrations\202302081825518_ImageURLAdded.Designer.cs">
+      <DependentUpon>202302081825518_ImageURLAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302082059495_CategoryAdded.cs" />
+    <Compile Include="Migrations\202302082059495_CategoryAdded.Designer.cs">
+      <DependentUpon>202302082059495_CategoryAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302082133022_NewCategoryViewModelAdded.cs" />
+    <Compile Include="Migrations\202302082133022_NewCategoryViewModelAdded.Designer.cs">
+      <DependentUpon>202302082133022_NewCategoryViewModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302091908487_addedIsfeatured.cs" />
+    <Compile Include="Migrations\202302091908487_addedIsfeatured.Designer.cs">
+      <DependentUpon>202302091908487_addedIsfeatured.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131436018_configurationstable.cs" />
+    <Compile Include="Migrations\202302131436018_configurationstable.Designer.cs">
+      <DependentUpon>202302131436018_configurationstable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302132045080_test1.cs" />
+    <Compile Include="Migrations\202302132045080_test1.Designer.cs">
+      <DependentUpon>202302132045080_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302141809314_addedBasicValidations.cs" />
+    <Compile Include="Migrations\202302141809314_addedBasicValidations.Designer.cs">
+      <DependentUpon>202302141809314_addedBasicValidations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302151507084_addedCategoryIDInProduct.cs" />
+    <Compile Include="Migrations\202302151507084_addedCategoryIDInProduct.Designer.cs">
+      <DependentUpon>202302151507084_addedCategoryIDInProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302151821056_AddedOrderandOrderItemsTable.cs" />
+    <Compile Include="Migrations\202302151821056_AddedOrderandOrderItemsTable.Designer.cs">
+      <DependentUpon>202302151821056_AddedOrderandOrderItemsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302151849075_AddedOrderandOrderItemsTable2.cs" />
+    <Compile Include="Migrations\202302151849075_AddedOrderandOrderItemsTable2.Designer.cs">
+      <DependentUpon>202302151849075_AddedOrderandOrderItemsTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Medic.Entities\Medic.Entities.csproj">
+      <Project>{7e4ffc6d-e139-4a6d-ab44-42626636ab93}</Project>
+      <Name>Medic.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302011750312_initialized.resx">
+      <DependentUpon>202302011750312_initialized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302081825518_ImageURLAdded.resx">
+      <DependentUpon>202302081825518_ImageURLAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302082059495_CategoryAdded.resx">
+      <DependentUpon>202302082059495_CategoryAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302082133022_NewCategoryViewModelAdded.resx">
+      <DependentUpon>202302082133022_NewCategoryViewModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302091908487_addedIsfeatured.resx">
+      <DependentUpon>202302091908487_addedIsfeatured.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131436018_configurationstable.resx">
+      <DependentUpon>202302131436018_configurationstable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302132045080_test1.resx">
+      <DependentUpon>202302132045080_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302141809314_addedBasicValidations.resx">
+      <DependentUpon>202302141809314_addedBasicValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302151507084_addedCategoryIDInProduct.resx">
+      <DependentUpon>202302151507084_addedCategoryIDInProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302151821056_AddedOrderandOrderItemsTable.resx">
+      <DependentUpon>202302151821056_AddedOrderandOrderItemsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302151849075_AddedOrderandOrderItemsTable2.resx">
+      <DependentUpon>202302151849075_AddedOrderandOrderItemsTable2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
